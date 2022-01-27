@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Input with Managed Bean</title>
+    </h:head>
+    //user.java
+    <h:body>
+        <f:view>
+            <h:form>
+                <h:panelGrid columns="2">
+                <h:outputText value="Enter the AatharID"/>
+                <h:inputText id="aid"  value="#{user.userName}"/>
+                                
+                 <h:outputText  value="Enter the Name"/>
+                 <h:inputText id="name"  value="#{user.loc}"/>
+                
+                 <h:outputText  value="Enter the Phone Number"/>
+                 <h:inputText id="ph"  value="#{user.ph}"/>
+                
+                    <h:commandButton value="Sumit" type="submit"/>
+                    
+                </h:panelGrid>
+            <h:commandLink value="Result Page" action="result"/>
+            </h:form>
+            
+            Your name is      #{user.userName} <br/>
+            Your location is  #{user.loc} <br/>
+            Your phone num is #{user.ph}
+            
+            
+            
+        </f:view>
+
+    </h:body>
+</html>
+

@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Selecting Input</title>
+    </h:head>
+    <h:body>
+        <f:view>
+            <h:form>
+            <h:outputText value="Choose one or more list item"/>
+            <h:selectManyListbox value = ""> 
+               <f:selectItem itemValue = "1" itemLabel = "Item 1" /> 
+               <f:selectItem itemValue = "2" itemLabel = "Item 2" />
+               <f:selectItem itemValue = "2" itemLabel = "Item 3" />
+               <f:selectItem itemValue = "2" itemLabel = "Item 4" />
+            </h:selectManyListbox>	
+            
+            <h:outputText value="Choose one list item"/>
+            <h:selectOneListbox value = ""> 
+               <f:selectItem itemValue = "1" itemLabel = "Item 1" /> 
+               <f:selectItem itemValue = "2" itemLabel = "Item 2" />
+               <f:selectItem itemValue = "2" itemLabel = "Item 3" />
+               <f:selectItem itemValue = "2" itemLabel = "Item 4" />
+            </h:selectOneListbox>
+            <br/><br/>
+            <h:outputText value="Choose one or more menu "/>
+            <h:selectManyMenu value = ""> 
+                <f:selectItem itemValue = "1" itemLabel = "Item 1" /> 
+                <f:selectItem itemValue = "2" itemLabel = "Item 2" /> 
+                <f:selectItem itemValue = "2" itemLabel = "Item 3" />
+                <f:selectItem itemValue = "2" itemLabel = "Item 4" />
+            </h:selectManyMenu> 
+            
+            <h:outputText value="Choose one menu "/>
+            <h:selectOneMenu value = "" > 
+                <f:selectItem itemValue = "1" itemLabel = "Item 1" /> 
+                <f:selectItem itemValue = "2" itemLabel = "Item 2" /> 
+                <f:selectItem itemValue = "2" itemLabel = "Item 3" />
+                <f:selectItem itemValue = "2" itemLabel = "Item 4" />
+            </h:selectOneMenu> 
+            
+            <br/><br/>
+            <h:outputText value="Choose many check"/>
+            <h:selectManyCheckbox value="">
+			<f:selectItem itemLabel="Item1" itemValue="1" />
+			<f:selectItem itemLabel="Item2" itemValue="2" />
+			<f:selectItem itemLabel="Item3" itemValue="3" />
+			<f:selectItem itemLabel="Item4" itemValue="4" />
+            </h:selectManyCheckbox>
+            <br/><br/>
+            <h:outputText value="Choose one check"/>
+            <h:selectBooleanCheckbox value = "Remember Me" id = "chkRememberMe" /> 
+            
+            <br/><br/>
+            <h:outputText value="Choose one radio"/>
+            <h:selectOneRadio value = ""> 
+                <f:selectItem itemValue = "1" itemLabel = "Item 1" /> 
+                <f:selectItem itemValue = "2" itemLabel = "Item 2" />
+            </h:selectOneRadio>
+                   
+
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+

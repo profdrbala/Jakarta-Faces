@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>output tag with CSS</title>
+        <h:outputStylesheet library="css" name="styles.css"/>
+    </h:head>
+    <h:body>
+        <f:view>
+            <h:form enctype= "multipart/form-data">
+                <h:outputLabel class="l" for="tb" value="Enter the Name">
+                    <h:inputText class="i" id="tb"  value=""/>
+                </h:outputLabel>
+                <br/>
+                <h:outputLabel class="l" for="pass" value="Enter the Password">
+                    <h:inputSecret class="i" id="pass" value=""/>
+                </h:outputLabel>
+                <br/>
+                <h:outputLabel class="l" for="ta" value="Enter the Address">
+                    <h:inputTextarea class="i" id="ta" value=""/>    
+                </h:outputLabel>                
+                <br/>
+                <h:outputLabel class="l" for="img" value="Select the Photo">
+                    <h:inputFile class="i" id="img" value=""/>    
+                </h:outputLabel>
+                <br/>
+                <h:inputHidden value=""/>
+                
+                <h:graphicImage library="images" name="jsf.png"/>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+

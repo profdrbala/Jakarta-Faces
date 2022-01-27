@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Validator test</title>
+    </h:head>
+    <h:body>
+        <h:form id="form">  
+            <h:panelGrid columns="2" border="1">
+                
+            <h:outputText value="Enter the First Name"/>
+            <h:inputText id="fname" value="#{validate.fname}" required="true" requiredMessage="Pls enter the First Name">  
+                  <f:validateLength minimum = "5" maximum = "8" />
+            </h:inputText>
+            
+            <h:outputText value="Enter the Middle Name"/>
+            <h:inputText id="mname" value="#{validate.mname}"  required="true" requiredMessage="Enter the middle name "/>  
+
+            <h:outputText value="Enter the Last Name"/>
+            <h:inputText id="lname" value="#{validate.lname}" validatorMessage="Enter the last name ">  
+                <f:validateRequired/>
+            </h:inputText>
+            
+            <h:outputText value="Enter the Age"/>
+            <h:inputText id="age" value="#{validate.age}" validatorMessage="Age can be between 1 to 100">  
+                  <f:validateLongRange minimum = "1" maximum = "100" />
+            </h:inputText>
+            
+            <h:outputText value="Enter the Salary"/>
+            <h:inputText id="salary" value="#{validate.salary}" validatorMessage="Salary can be between 1.0 to 1000.0">  
+                <f:validateDoubleRange minimum = "1" maximum = "1000" />
+            </h:inputText>
+            
+            <h:outputText value="Enter the Password"/>
+            <h:inputSecret id="pass" value="#{validate.pass}" validatorMessage="Password should be 6 character, can be numbers/letters">
+                <f:validateRegex pattern = "((?=.*[a-z,0-9]).{6,})"/>
+            </h:inputSecret>
+            
+            <h:outputText value="Enter the E-Mail"/>
+            <h:inputText id="email" value="#{validate.email}" validatorMessage="Email shouold be format" accesskey="e">  
+                <f:validateBean/>
+            </h:inputText>
+            
+            <h:outputText value="Enter the Phone"/>
+            <h:inputText id="phone" value="#{validate.phone}" accesskey="p" >  
+                <f:validateLength minimum = "10" maximum = "10" />
+            </h:inputText>
+            
+            </h:panelGrid>
+            <h:commandButton value="OK" type="submit()"></h:commandButton>  
+            
+            <h:messages style="color:red"></h:messages> 
+        </h:form>  
+        #{validate.fname}
+        #{validate.mname}
+        #{validate.lname}
+        #{validate.age}
+        #{validate.salary}
+        #{validate.pass}
+        #{validate.email}
+        #{validate.phone}
+    </h:body>
+</html>
+

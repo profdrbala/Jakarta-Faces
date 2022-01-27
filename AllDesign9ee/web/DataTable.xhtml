@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Data Table</title>
+    </h:head>
+   
+    <h:body>
+        <f:view>
+                <h:form enctype= "multipart/form-data">
+                <h:panelGrid columns="2">
+                <h:outputText value="Enter the Name"/>
+                <h:inputText  value="#{datatable.userName}"/>
+                <h:outputText value="Enter the Address"/>
+                <h:inputTextarea value="#{datatable.loc}"/>
+                <h:outputText  value="Enter the Phone Number"/>
+                 <h:inputText id="ph"  value="#{datatable.ph}"/>
+                <h:commandButton value="Add New" action="#{datatable.addNew()}"/>
+                <h:commandButton value="Clear Table" action="#{datatable.clearTable()}"/>
+                </h:panelGrid>
+           </h:form>
+            <br/><br/>
+            <h:form>
+                <h:dataTable border="1" value="#{datatable.list}" var="i">
+                      <h:column>
+                            <f:facet name="header">User Name</f:facet>
+                            <h:outputText value="#{i.userName}"/>
+                        </h:column>
+                      <h:column>
+                            <f:facet name="header">Location</f:facet>
+                            <h:outputText value="#{i.loc}"/>
+                        </h:column>
+                      <h:column>
+                            <f:facet name="header">Phone</f:facet>
+                            <h:outputText value="#{i.ph}"/>
+                        </h:column>
+           
+                </h:dataTable>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+
