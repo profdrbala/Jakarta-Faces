@@ -10,3 +10,5 @@ Understand the basics of Jakarta's faces technology,
 Understand UI components and component suites,
 Be familiar with CDI, converters, and validators,
 Be familiar with connecting database.
+
+older version video available in : https://www.youtube.com/playlist?list=PLuRSyTQwnDAxbF59tuzAi3gANv6ETHuR-
